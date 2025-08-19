@@ -256,13 +256,13 @@
     // Formulário contato fake
     document.getElementById("form-contato").addEventListener("submit", e => {
       e.preventDefault();
-      alert("Mensagem enviada com sucesso! (simulação)");
+      alert("Mensagem enviada com sucesso!");
       e.target.reset();
     });
 
     // Finalizar compra fake
     document.getElementById("finalizar").addEventListener("click", () => {
-      alert("Obrigado pela compra! Seu pedido foi processado (simulação).");
+      alert("Obrigado pela compra! Seu pedido foi processado.");
       listaCarrinho.innerHTML = "";
       count = 0;
       total = 0;
