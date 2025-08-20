@@ -204,6 +204,15 @@
     </div>
   </footer>
 
+  <!-- Modal de Finalização -->
+<div id="modal-compra" class="modal hidden">
+  <div class="modal-content">
+    <h2>✅ Compra Finalizada!</h2>
+    <p>Obrigado pela sua compra! Seu pedido foi processado com sucesso.</p>
+    <button id="fechar-modal">Fechar</button>
+  </div>
+</div>
+
   <!-- Script -->
   <script>
     const botoes = document.querySelectorAll(".btn-carrinho");
@@ -260,15 +269,25 @@
       e.target.reset();
     });
 
-    // Finalizar compra fake
-    document.getElementById("finalizar").addEventListener("click", () => {
-      alert("Obrigado pela compra! Seu pedido foi processado.");
-      listaCarrinho.innerHTML = "";
-      count = 0;
-      total = 0;
-      cartCount.textContent = 0;
-      totalSpan.textContent = "Total: R$ 0,00";
-    });
+    // Finalizar compra com modal
+document.getElementById("finalizar").addEventListener("click", () => {
+  // limpar carrinho
+  listaCarrinho.innerHTML = "";
+  count = 0;
+  total = 0;
+  cartCount.textContent = 0;
+  totalSpan.textContent = "Total: R$ 0,00";
+
+  // mostrar modal
+  const modal = document.getElementById("modal-compra");
+  modal.classList.add("show");
+
+  // fechar modal
+  document.getElementById("fechar-modal").addEventListener("click", () => {
+    modal.classList.remove("show");
+  });
+});
+
   </script>
 </body>
 </html>
