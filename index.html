@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mayron Sports & Picanha</title>
+  <title>Mayron Sports</title>
   <link rel="stylesheet" href="style.css" />
   <!-- Fontes melhores -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
     <div class="overlay"></div>
     <div class="hero-content">
       <h1 class="titulo-site">Mayron Sports</h1>
-      <p>Os melhores uniformes do Mayron!</p>
+      <p>Os melhores uniformes de futebol que você pode encontrar!</p>
     </div>
     <nav>
       <ul>
@@ -28,7 +28,7 @@
   <!-- Seção INÍCIO -->
   <!-- Seção INÍCIO -->
 <section id="inicio" class="aba">
-  <h2>⚽ Bem-vindo ao Mayron Sports</h2>
+  <h2>Bem-vindo ao Mayron Sports</h2>
   <p>O futebol é mais do que um esporte, é uma paixão mundial que une torcedores, culturas e gerações. 
   No Brasil, ele faz parte da identidade nacional, inspirando milhões de pessoas a cada gol, drible e conquista. 
   Neste site você encontra camisas de clubes e seleções, mas também celebra a magia do futebol.</p>
@@ -36,19 +36,19 @@
   <!-- Seção de destaques -->
   <div class="inicio-destaques">
     <div class="card">
-      <img src="coloque-sua-imagem-aqui.jpg" alt="Jogador famoso">
+      <img src="https://i.pinimg.com/originals/f5/a9/51/f5a9516e57544db1e808292e1416000b.gif" alt="Jogador famoso">
       <h3>Craques do Futebol</h3>
       <p>De Pelé a Messi, de Ronaldo a Neymar — o futebol é palco de lendas que marcaram gerações. 
       Cada camisa carrega a história de craques que emocionaram multidões.</p>
     </div>
     <div class="card">
-      <img src="coloque-sua-imagem-aqui.jpg" alt="Torcida vibrando">
+      <img src="https://media.tenor.com/paqhGrtO1-wAAAAM/brasil-selecao.gif" alt="Torcida vibrando">
       <h3>Paixão da Torcida</h3>
       <p>A energia das arquibancadas é única! O grito de gol, as bandeiras, a festa — tudo isso faz parte do espetáculo
       que só o futebol proporciona.</p>
     </div>
     <div class="card">
-      <img src="coloque-sua-imagem-aqui.jpg" alt="Troféu">
+      <img src="https://i.gifer.com/DtA0.gif" alt="Troféu">
       <h3>Glórias e Conquistas</h3>
       <p>Grandes títulos, finais históricas e momentos eternizados. O futebol nos dá memórias que jamais se apagam.</p>
     </div>
@@ -204,15 +204,6 @@
     </div>
   </footer>
 
-  <!-- Modal de Finalização -->
-<div id="modal-compra" class="modal hidden">
-  <div class="modal-content">
-    <h2>✅ Compra Finalizada!</h2>
-    <p>Obrigado pela sua compra! Seu pedido foi processado com sucesso.</p>
-    <button id="fechar-modal">Fechar</button>
-  </div>
-</div>
-
   <!-- Script -->
   <script>
     const botoes = document.querySelectorAll(".btn-carrinho");
@@ -265,29 +256,19 @@
     // Formulário contato fake
     document.getElementById("form-contato").addEventListener("submit", e => {
       e.preventDefault();
-      alert("Mensagem enviada com sucesso!");
+      alert("Mensagem enviada com sucesso! (simulação)");
       e.target.reset();
     });
 
-    // Finalizar compra com modal
-document.getElementById("finalizar").addEventListener("click", () => {
-  // limpar carrinho
-  listaCarrinho.innerHTML = "";
-  count = 0;
-  total = 0;
-  cartCount.textContent = 0;
-  totalSpan.textContent = "Total: R$ 0,00";
-
-  // mostrar modal
-  const modal = document.getElementById("modal-compra");
-  modal.classList.add("show");
-
-  // fechar modal
-  document.getElementById("fechar-modal").addEventListener("click", () => {
-    modal.classList.remove("show");
-  });
-});
-
+    // Finalizar compra fake
+    document.getElementById("finalizar").addEventListener("click", () => {
+      alert("Obrigado pela compra! Seu pedido foi processado (simulação).");
+      listaCarrinho.innerHTML = "";
+      count = 0;
+      total = 0;
+      cartCount.textContent = 0;
+      totalSpan.textContent = "Total: R$ 0,00";
+    });
   </script>
 </body>
 </html>
